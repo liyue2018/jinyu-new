@@ -1,0 +1,183 @@
+/*
+* @Author: liyue2018
+* @Date:   2018-04-08 16:43:53
+* @Last Modified by:   yongze-chen
+* @Last Modified time: 2018-09-09 18:35:36
+*/
+
+
+
+html {
+    font-size: 16px;
+}
+
+body{
+    background: #f5f5f5;
+    color: #333;
+    position:relative;
+}
+html, body {
+    font-family: 'Microsoft Yahei', sans-serif;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    color: #5a5a5a;
+    overflow-y: visible;
+    background: #fff;
+    min-width: 1200px;
+    max-width: 1920px;
+    margin: 0;
+    padding: 0;
+}
+
+// 设置字体
+@media screen and (min-width: 375px) {
+    html {
+        /* iPhone6的375px尺寸作为16px基准，414px正好18px大小, 600 20px */
+        font-size: calc(100% + 2 * (100vw - 375px) / 39);
+        font-size: calc(16px + 2 * (100vw - 375px) / 39);
+    }
+}
+@media screen and (min-width: 414px) {
+    html {
+        /* 414px-1000px每100像素宽字体增加1px(18px-22px) */
+        font-size: calc(112.5% + 4 * (100vw - 414px) / 586);
+        font-size: calc(18px + 4 * (100vw - 414px) / 586);
+    }
+}
+@media screen and (min-width: 600px) {
+    html {
+        /* 600px-1000px每100像素宽字体增加1px(20px-24px) */
+        font-size: calc(125% + 4 * (100vw - 600px) / 400);
+        font-size: calc(20px + 4 * (100vw - 600px) / 400);
+    }
+}
+@media screen and (min-width: 1000px) {
+    html {
+        /* 1000px往后是每100像素0.5px增加 */
+        font-size: calc(137.5% + 6 * (100vw - 1000px) / 1000);
+        font-size: calc(22px + 6 * (100vw - 1000px) / 1000);
+    }
+}
+
+// 公共头部
+.jy-docs-nav{
+    background:#fff;
+    margin-bottom:0;
+    height: 80px;
+    a {
+        color:#563d7c;
+        font-weight:500;
+    }
+    .navbar-header{
+        .navbar-brand {
+            padding-top: 10px;
+            img {
+                width: 100px;
+                height: 30px;
+            }
+        }
+        .navbar-toggle{
+            border-color:#ddd;
+            .icon-bar{
+                background:#563d7c;
+            }
+        }
+    }
+    .navbar-collapse{
+        position: relative;
+        .navbar-nav{
+            position: absolute;
+            right: 0;
+            li {
+                width: 90px;
+                text-align: center;
+                a {
+                    line-height: 80px;
+                    position: relative;
+                    height: 100%;
+                    span {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        z-index: 2;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    .bkg {
+                        top: 100%;
+                        z-index: 1;
+                        background-color: #142952;
+                        -webkit-transition: all 300ms ease-in-out;
+                        transition: all 300ms ease-in-out;
+                        opacity: 0;
+                    }
+                    &:hover {
+                        color: #fff;
+                        .bkg {
+                            top: 0;
+                            opacity: 1;
+                        }
+                    }
+                }
+                a.active {
+                    background: #142952;
+                    color: #fff;                    
+                }
+            }
+        }
+    }
+}
+
+// 公共底部
+.footer {
+    background: #d19957;
+    width: 100%;
+    color: #e9ded1;
+    height: 100px;
+    margin-top: 60px;
+    padding-top: 20px;
+    .footer-container {
+        width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        .footer-l {
+            width: 500px;
+            height: 90px;
+            background: #f00;
+            position: absolute;
+            left: 0;
+            top； 0;
+            .links {
+                margin: {
+                    bottom: 10px;
+                    left: -10px;
+                }
+                a {
+                    display: inline-block;
+                    padding: 0 10px;
+                    text-align: center;
+                    color: #e9ded1;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        .footer-r {
+          width: 564px;
+          height: 90px;
+          position: absolute;
+          right: 0;
+          top: 0;
+          font-size: small;
+        }
+    }
+}
+
+
+
+
+
+
+
+
